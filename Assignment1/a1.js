@@ -1,3 +1,5 @@
+
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -28,19 +30,7 @@ function automateTests(){
         let randPath = testPaths[getRandomInt(testPaths.length - 1)];
         console.log(httpRequest(randVerb,randPath));
     }
-    while (true){
-        randomRequest();
-        setInterval(1000);
-    }
-
-    
+    setInterval(randomRequest,1000);
 }
 
-
-console.log(httpRequest("GET","/"));
-console.log(httpRequest("GET","/about"));
-console.log(httpRequest("GET","/contact"));
-console.log(httpRequest("POST","/login"));
-console.log(httpRequest("GET","/panel"));
-console.log(httpRequest("POST","/logout"));
-console.log(httpRequest("GET","/logout"));
+automateTests();
