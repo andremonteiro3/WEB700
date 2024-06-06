@@ -20,6 +20,7 @@ var serverResponses = ["Welcome to WEB700 Assignment 1",
                         "Hello, User Logged In",
                         "Main Panel",
                         "Logout Complete. Goodbye"];
+                        
 function httpRequest(httpVerb, path) {
     for (let idx = 0; idx < serverVerbs.length; idx++){
         if (serverVerbs[idx] === httpVerb && serverPaths[idx] === path) {
