@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 class Data {
   courses;
   students;
@@ -8,12 +11,9 @@ class Data {
   }
 }
 
-dataCollection = null;
+var dataCollection = null;
 
-const fs = require("fs");
-const path = require("path");
-
-export function initialize() {
+module.exports.initialize = function() {
   let studentsFilePath = path.resolve(__dirname, "..", "data", "students.json");
   let coursesFilePath = path.resolve(__dirname, "..", "data", "courses.json");
 
@@ -32,7 +32,7 @@ export function initialize() {
         }
 
         let coursesFileData = JSON.parse(coursesFileStr);
-        this.dataCollection = new Data(studentsFileData, coursesFileData);
+        dataCollection = new Data(studentsFileData, coursesFileData);
         resolve("Initialization Successful");
       });
     });
@@ -40,7 +40,7 @@ export function initialize() {
   return initializePromise;
 }
 
-export function checkInitialized(reject) {
+function checkInitialized(reject) {
   if (dataCollection == null) {
     reject("Data Collection not initialized.");
     return false;
@@ -48,7 +48,7 @@ export function checkInitialized(reject) {
   return true;
 }
 
-export function getAllStudents() {
+module.exports.getAllStudents = function() {
   getAllStudentsPromise = new Promise(function (resolve, reject) {
     if (!checkInitialized(reject)) {
       return;
@@ -65,9 +65,9 @@ export function getAllStudents() {
   return getAllStudentsPromise;
 }
 
-export function getTAs() {
+module.exports.getTAs = function() {
   getTAsPromise = new Promise(function (resolve, reject) {
-    getAllStudents()
+    module.exports.getAllStudents()
       .then((allStudents) => {
         let filteredStudents = dataCollection.students.filter(
           (student) => student.TA == true
@@ -85,7 +85,7 @@ export function getTAs() {
   return getTAsPromise;
 }
 
-export function getCourses() {
+module.exports.getCourses = function() {
   getCoursesPromise = new Promise(function (resolve, reject) {
     if (!checkInitialized(reject)) {
       return;
