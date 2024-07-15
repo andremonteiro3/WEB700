@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB700 - Home</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Andre Hideo Onoda Monteiro</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="/students">Students</a></li>
+					<li class="nav-item"><a class="nav-link" href="/tas">Teaching Assistants</a></li>
+					<li class="nav-item"><a class="nav-link" href="/courses">Courses</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<main class="col-md-12">
+
+
+
+					<!-- Start your code here -->
+					<h1>Welcome to the WEB700 app!</h1>
+					<p>This website has been made to demonstrate HTML5 principles and techniques, running routes in a Express JS backend.</p>					
+					<h2>Website Features</h2>
+					<p>This website consists of 3 static views and 5 routes to supply data using JSON format.</p>
+					<h3>Static routes</h3>
+					<ul>
+						<li><a href="/">/</a> - Home page</li>
+						<li><a href="/about">/about</a> - About the author</li>
+						<li><a href="/htmlDemo">/htmlDemo</a> - Demonstration of HTML5 features</li>
+					</ul>
+					<h3>Data routes</h3>
+					<ul>
+						<li><a href="/students">/students</a> - Return all Students.</li>
+						<li><a href="/students?course=2">/students?course={id}</a> - Return students enrolled in the course with id {id}.</li>
+						<li><a href="/students/5">/students/{student_id}</a> - Return the student with id {student_id}.</li>
+						<li><a href="/tas">/tas</a> - Return all TAs.</li>
+						<li><a href="/courses">/courses</a> - Return all available courses.</li>
+					</ul>
+					<h3>About HTML5</h3>
+					<p>This website leverages HTML5, which is the most recent version of HTML (<b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>anguage), a widely used protocol to structure and present content on the World Wide Web. HTML5 stands out from previous versions by providing support for modern media formats, improved responsiveness and better integration with other technologies. </p>
+					<!-- End your code here  -->
+
+
+
+				</main>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
