@@ -2,8 +2,8 @@
 
 body,
 html {
-    background: rgb(0, 106, 128);
-    background: linear-gradient(0deg, #006076 0%, #090960 14%, #002400 30%);
+    background: #000000;
+    background: linear-gradient(0deg, #006076 0%, #090960 14%, #000000 30%);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
